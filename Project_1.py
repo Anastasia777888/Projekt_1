@@ -49,17 +49,11 @@ for words in user_text.split():
 for words in user_text.split():
     if words.istitle():
         capitalized_words += 1
-
-for words in user_text.split():
-    if words.islower:
+    elif words.islower:
         small_letters += 1
-
-for words in user_text.split():
-    if words.isupper:
+    elif words.isupper:
         big_letters += 1
-
-for words in user_text.split():
-    if words.isdigit():
+    elif words.isdigit():
         numbers += 1
         sum_numbers += int(words)
 
