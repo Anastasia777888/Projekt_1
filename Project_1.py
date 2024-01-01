@@ -26,15 +26,15 @@ else:
     quit()
        
 
-user_choice = input("Enter a number btw. 1 and 3 to select:")
+while True:
 
+    user_choice = input("Enter a number btw. 1 and 3 to select:")
 
-if user_choice.isdigit() and 1 <= int(user_choice) <= len(task_template.TEXTS):
-    user_text = task_template.TEXTS[int(user_choice) - 1]
-    
-else:
-    print("The entered text number does not exist. Please try again.")
-
+    if user_choice.isdigit() and 1 <= int(user_choice) <= len(task_template.TEXTS):
+        user_text = task_template.TEXTS[int(user_choice) - 1]
+        break
+    else:
+        print("The entered text number does not exist. Please try again.")
 
 how_many_words = 0
 capitalized_words = 0
@@ -46,12 +46,11 @@ sum_numbers = 0
 for words in user_text.split():
     how_many_words += 1
 
-for words in user_text.split():
     if words.istitle():
         capitalized_words += 1
-    elif words.islower:
+    elif words.islower():
         small_letters += 1
-    elif words.isupper:
+    elif words.isupper():
         big_letters += 1
     elif words.isdigit():
         numbers += 1
